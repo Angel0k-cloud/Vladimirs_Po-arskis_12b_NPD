@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restorāna rezervācija</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbarInner">
+      <div class="brand">
+        <div class="brandMark" aria-hidden="true">🍽️</div>
+        <div>
+          <h1>Restorāna rezervācija</h1>
+          <p class="subtitle">Rezervē galdiņu — ātri, ērti un bez zvaniem.</p>
+        </div>
+      </div>
+
+      <div class="tag">
+        <span class="tagDot" aria-hidden="true"></span>
+        <span>Atvērts: 12:00–22:00</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card hero">
+      <div class="heroText">
+        <h2 class="heroTitle">Rezervē galdiņu savam vakaram</h2>
+        <p class="heroDesc">
+          Ievadi vārdu, cilvēku skaitu, datumu un laiku. Ja grupa ir liela, sistēma uzreiz parādīs brīdinājumu.
+        </p>
+        <div class="heroBadges">
+          <span class="badge">✅ Tūlītējs apstiprinājums</span>
+          <span class="badge">⚠️ Brīdinājums lielām grupām</span>
+          <span class="badge">📅 Datums nevar būt pagātnē</span>
+        </div>
+      </div>
+
+      <div class="heroArt" aria-hidden="true">
+        <div class="plate"></div>
+        <div class="spark s1"></div>
+        <div class="spark s2"></div>
+        <div class="spark s3"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Rezervācijas ievade</h2>
+
+      <div class="grid">
+        <div class="field">
+          <label for="name">Rezervācija uz vārda</label>
+          <input id="name" class="input" type="text" placeholder="Piemēram: Anna Ozola" />
+          <div class="hint">Ievadi vārdu (vismaz 2 simboli).</div>
+        </div>
+
+        <div class="field">
+          <label for="people">Cilvēku skaits</label>
+          <input id="people" class="input" type="number" min="1" max="30" placeholder="Piemēram: 4" />
+          <div id="peopleHint" class="hint">Ievadi skaitli no 1 līdz 30.</div>
+        </div>
+
+        <div class="field">
+          <label for="date">Datums</label>
+          <input id="date" class="input" type="date" />
+          <div class="hint">Izvēlies datumu.</div>
+        </div>
+
+        <div class="field">
+          <label for="time">Laiks</label>
+          <select id="time" class="input">
+            <option value="">Izvēlies laiku</option>
+            <option>12:00</option><option>13:00</option><option>14:00</option>
+            <option>18:00</option><option>19:00</option><option>20:00</option><option>21:00</option>
+          </select>
+          <div class="hint">Lūdzu, izvēlieties vēlamo rezervācijas laiku.</div>
+        </div>
+
+        <div class="field">
+          <label for="zone">Zāle</label>
+          <select id="zone" class="input">
+            <option value="iekšā">Iekšā</option>
+            <option value="terase">Terase</option>
+          </select>
+          <div class="hint">Izvēlies zonu atbilstoši noskaņai.</div>
+        </div>
+      </div>
+
+      <button id="reserveBtn" class="btn" type="button">Rezervēt</button>
+
+      <div class="resultWrap">
+        <div id="result" class="result neutral" role="status" aria-live="polite">
+          Aizpildi laukus un nospied “Rezervēt”, lai redzētu rezultātu.
+        </div>
+      </div>
+    </section>
+
+    <section class="card split">
+      <div>
+        <h2>Kontaktinformācija</h2>
+        <p class="small">
+          Lielām grupām vai īpašām vēlmēm: zvaniet <strong>+371 29620375</strong> vai rakstiet
+          <strong>rezervacija@restorans.lv</strong>
+        </p>
+      </div>
+      <div class="mini">
+        <div class="miniRow">
+          <span class="miniIcon" aria-hidden="true">📍</span>
+          <span>Rīga, Centrs</span>
+        </div>
+        <div class="miniRow">
+          <span class="miniIcon" aria-hidden="true">🍷</span>
+          <span>Vakariņām & pasākumiem</span>
+        </div>
+        <div class="miniRow">
+          <span class="miniIcon" aria-hidden="true">🧾</span>
+          <span>Rēķins uz vietas</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Restorāns</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
